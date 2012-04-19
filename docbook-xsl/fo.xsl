@@ -31,10 +31,12 @@
 -->
 <xsl:param name="hyphenate">false</xsl:param>
 <!-- justify, left or right -->
-<xsl:param name="alignment">left</xsl:param>
+<xsl:param name="alignment">justify</xsl:param>
+<xsl:param name="line-height" select="1.5"/>
 
-<xsl:param name="body.font.family" select="'serif'"/>
-<xsl:param name="body.font.master">12</xsl:param>
+<xsl:param name="body.font.family" select="'Helvetica'"/>
+<xsl:param name="title.font.family" select="'Helvetica'"/>
+<xsl:param name="body.font.master">11</xsl:param>
 <xsl:param name="body.font.size">
  <xsl:value-of select="$body.font.master"/><xsl:text>pt</xsl:text>
 </xsl:param>
@@ -84,14 +86,14 @@
 <xsl:param name="page.margin.bottom" select="'0.25in'"/>
 <xsl:param name="page.margin.inner">
   <xsl:choose>
-    <xsl:when test="$double.sided != 0">0.75in</xsl:when>
-    <xsl:otherwise>0.75in</xsl:otherwise>
+    <xsl:when test="$double.sided != 0">0.6in</xsl:when>
+    <xsl:otherwise>0.6in</xsl:otherwise>
   </xsl:choose>
 </xsl:param>
 <xsl:param name="page.margin.outer">
   <xsl:choose>
-    <xsl:when test="$double.sided != 0">0.5in</xsl:when>
-    <xsl:otherwise>0.5in</xsl:otherwise>
+    <xsl:when test="$double.sided != 0">0.75in</xsl:when>
+    <xsl:otherwise>0.75in</xsl:otherwise>
   </xsl:choose>
 </xsl:param>
 
