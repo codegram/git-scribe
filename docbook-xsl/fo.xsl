@@ -35,7 +35,6 @@
 <xsl:param name="line-height" select="1.5"/>
 
 <xsl:param name="body.font.family" select="'Helvetica'"/>
-<xsl:param name="title.font.family" select="'Helvetica'"/>
 <xsl:param name="body.font.master">11</xsl:param>
 <xsl:param name="body.font.size">
  <xsl:value-of select="$body.font.master"/><xsl:text>pt</xsl:text>
@@ -67,6 +66,11 @@
 <xsl:template match="processing-instruction('asciidoc-pagebreak')">
    <fo:block break-after='page'/>
 </xsl:template>
+
+<xsl:attribute-set name="section.title.properties">
+  <xsl:attribute name="color">#db2e34</xsl:attribute>
+  <xsl:attribute name="font-family">'Helvetica'</xsl:attribute>
+</xsl:attribute-set>
 
 <!-- Sets title to body text indent -->
 <xsl:param name="body.start.indent">
